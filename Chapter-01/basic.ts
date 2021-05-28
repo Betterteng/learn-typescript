@@ -53,5 +53,22 @@ g = ['a', 'b', 'c'];
 let h: [string, string];    // This declaration represents an array only contains 2 string inside
 h = ['a', 'b']
 
+enum Gender{
+    Male,
+    Female
+}
 
+let i: {name: string, gender: Gender};
+i = {name: 'oscar', gender: Gender.Male};
+
+console.log(i.gender === Gender.Male);
+
+// & represents simultaneously satisfy the following requirements
+let j: {name: string} & {age: number};
+j = {name: 'oscar', age: 19};
+
+// 类型的别名
+type myType = 1 | 2 | 3;
+let k: myType;
+k = 1;
 
